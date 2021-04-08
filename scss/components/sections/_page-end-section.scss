@@ -1,0 +1,85 @@
+.page-end-section{
+	background: #000;
+
+	img{
+		height: 5.1389vw;
+		width: auto;
+		display: block;
+	}
+
+	.container{
+		height: 15.0000vw;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@media screen and (max-width: 991px){
+		img{
+			height: 40px;
+		}
+
+		.container{
+			height: 96px;
+			justify-content: flex-end;
+		}
+	}
+}
+
+.to-top-btn{
+	width: 3.8889vw;
+	height: 3.8889vw;
+	border-radius: 50%;
+	background: #191A1A;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	html[dir="ltr"] &{
+		left: 15px;
+	}
+
+	html[dir="rtl"] &{
+		right: 15px;
+	}
+
+	.btn-icon{
+		width: 1.3889vw;
+		height: 1.3889vw;
+		fill: #fff;
+		display: block;
+		transition: all $t;
+	}
+
+	&:hover,
+	&:focus{
+		background: $primary;
+		outline: none;
+
+		.btn-icon{
+			fill: #000;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		width: 56px;
+		height: 56px;
+
+		.btn-icon{
+			width: 20px;
+			height: 20px;
+		}
+
+		html[dir="ltr"] &{
+			left: calc((100vw - 100% + 20px) / 2);
+		}
+
+		html[dir="rtl"] &{
+			right: calc((100vw - 100% + 20px) / 2);
+		}
+	}
+}

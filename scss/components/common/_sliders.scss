@@ -1,0 +1,162 @@
+.slick-slider{
+	.slick-slide{
+		outline: none !important;
+	}
+
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.slick-arrow{
+	height: 50px;
+	width: 50px;
+	z-index: 20;
+	background: transparent;
+	transition: all $t;
+	display: flex;
+	align-items: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #657991;
+	border-radius: 50%;
+	box-shadow: 0px 4px 4px rgba(70, 92, 121, 0.2);
+
+	svg{
+		width: 10px;
+		height: 16px;
+		display: block;
+		transition: all $t;
+		fill: #fff;
+	}
+
+	&:before{
+		content: '';
+		display: block;
+	}
+
+	&:hover,
+	&:focus{
+		background: #fff;
+		box-shadow: 0px 2px 10px rgba(78, 127, 222, 0.2);
+
+		svg{
+			fill: $primary;
+		}
+	}
+
+	&.slick-prev{
+		left: -55px;
+	}
+
+	&.slick-next{
+		right: -55px;
+	}
+
+	&.slick-disabled{
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	@media screen and (max-width: 767px){
+		width: 28px;
+		height: 28px;
+
+		svg{
+			width: 6px;
+			height: 9px;
+		}
+	}
+}
+
+.slick-dotted.slick-slider{
+	margin-bottom: 0;
+}
+
+.slick-dots{
+	bottom: -30px !important;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	
+	li{
+		margin: 0 3px;
+		width: 10px;
+		height: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		button{
+			width: 8px;
+			height: 8px;
+			background: $primary;
+			padding: 0;
+			opacity: 1;
+			transition: all $t;
+			border-radius: 50%;
+			border: 2px solid $primary;
+
+			&:before{
+				display: none;
+			}
+
+			&:hover{
+				opacity: 1;
+			}
+		}
+
+		&.slick-active{
+			button{
+				opacity: 1;
+				width: 10px;
+				height: 10px;
+				background: transparent;
+			}
+		}
+	}
+}
+
+.default-slider-wrapper{
+	@media screen and (min-width: 768px){
+		padding: 0 65px;
+
+		.slick-slider{
+			width: calc(100% + 10px * 2);
+			margin: -10px;
+			
+			.slide{
+				padding: 10px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		padding-bottom: 48px;
+
+		.slick-slider{
+			width: calc(100% + 8px * 2);
+			margin: -8px;
+			
+			.slick-slide{
+				padding: 8px;
+			}
+
+			.slick-arrow{
+				transform: translateY(0);
+				top: calc(100% + 20px);
+
+				&.slick-prev{
+					left: 8px;
+				}
+
+				&.slick-next{
+					right: 8px;
+				}
+			}
+		}
+	}
+}

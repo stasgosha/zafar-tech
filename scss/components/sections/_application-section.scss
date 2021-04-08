@@ -1,0 +1,61 @@
+.application-section{
+	padding: 1.3889vw 0;
+	background: #000;
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 22.2222vw 1fr min-content;
+		grid-gap: 2.7778vw;
+		align-items: center;
+	}
+
+	.block-caption{
+		@include h4;
+		color: #fff;
+	}
+
+	.block-text{
+		font-size: 0.9722vw;
+	}
+
+	@media screen and (max-width: 1199px){
+		.section-inner{
+			grid-gap: 24px;
+		}
+
+		.block-text{
+			font-size: 12px;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		padding: 20px 0;
+
+		.section-inner{
+			grid-template-columns: 1fr;
+			grid-gap: 16px;
+			justify-items: start;
+		}
+
+		.block-text{
+			font-size: 14px;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.section-inner{
+			justify-content: stretch;
+		}
+
+		.btn{
+			width: 100%;
+			background: $primary;
+			border: 0;
+
+			&:hover,
+			&:focus{
+				background: #5B422C;
+			}
+		}
+	}
+}

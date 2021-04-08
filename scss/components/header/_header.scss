@@ -1,0 +1,142 @@
+.header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	padding: 2.7778vw 0;
+	transition: padding $t, background $t;
+
+	.header-inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: calc(100% + 1.0417vw * 2);
+		margin-left: -1.0417vw;
+		margin-right: -1.0417vw;
+		
+		.header-block{
+			padding: 0 1.0417vw;
+		}
+	}
+
+	&.sticky{
+		padding: 1.3889vw 0;
+		background: #310000;
+	}
+
+	.header-start{
+		display: flex;
+		align-items: center;
+		transition: all $t;
+
+		.logo-block{
+			position: relative;
+			margin-right: 3.3333vw;
+
+			&:after{
+				content: '';
+				display: block;
+				width: 1px;
+				height: 100%;
+				background: #5B422C;
+				position: absolute;
+				top: 0;
+				right: -1.7361vw;
+			}
+
+			html[dir="rtl"] &{
+				margin-right: 0;
+				margin-left: 3.3333vw;
+
+				&:after{
+					right: auto;
+					left: -1.7361vw;
+				}
+			}
+		}
+	}
+
+	&.nav-opened{
+		pointer-events: none;
+		background: transparent;
+
+		.header-start{
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		.menu-opener{
+			pointer-events: auto;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		padding: 20px 0;
+
+		.header-inner{
+			width: calc(100% + 15px * 2);
+			margin-left: -15px;
+			margin-right: -15px;
+			
+			.header-block{
+				padding: 0 15px;
+			}
+		}
+
+		&.sticky{
+			padding: 10px 0;
+		}
+
+		.header-start{
+			.logo-block{
+				margin-right: 48px;
+
+				&:after{
+					right: -24px;
+				}
+
+				html[dir="rtl"] &{
+					margin-right: 0;
+					margin-left: 48px;
+
+					&:after{
+						right: auto;
+						left: -24px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.language-link{
+	font-family: $rtl-font;
+	font-size: 0.9722vw;
+	line-height: 1.2;
+	color: #fff;
+
+	&:hover,
+	&:focus{
+		color: $primary;
+		outline: none;
+	}
+
+	@media screen and (max-width: 991px){
+		font-size: 14px;
+	}
+}
+
+.logo-block{
+	display: flex;
+
+	img{
+		height: 2.7778vw;
+		width: auto;
+		display: block;
+
+		@media screen and (max-width: 991px){
+			height: 40px;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+// Fonts
+$main-font: 'Raleway', Arial, sans-serif;
+$second-font: 'Playfair Display', $main-font;
+$rtl-font: 'Noto Sans Arabic UI', $main-font;
+
+// Colors
+$navy: #0D5667;
+$orange: #F1B32C;
+$blue: #186282;
+
+$gray: #4A4A4A;
+$dark: #3F485A;
+$light: #657492;
+
+$text-color: #999;
+$text-dark: $dark;
+$text-light: $light;
+
+$primary: #C9A66E;
+$accent: $navy;
+
+// Params
+$gradient: linear-gradient(180deg, #310000 0%, #000000 100%);
+$body-bg: $gradient; // site background
+$t: .3s; // animation duration
+$r: 0; // default border radius
+$shadow: unset; // default card shadow

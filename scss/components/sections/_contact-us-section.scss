@@ -1,0 +1,303 @@
+.contact-us-section{
+	padding: 16.6667vw 0 8.3333vw;
+	min-height: 100vh;
+	transition: all $t;
+	position: relative;
+
+	&:before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: url(../img/backgrounds/contacts-page-bg.jpg) no-repeat center center / cover;
+		transition: all $t;
+
+		@media screen and (min-width: 992px){
+			background-attachment: fixed;
+		}
+	}
+
+	.container{
+		position: relative;
+		z-index: 2;
+	}
+
+	.section-content{
+		width: 38.8889vw;
+		margin-right: auto;
+
+		p{
+			color: #fff;
+			margin-bottom: 1.1111vw;
+		}
+
+		a[href^="tel"]{
+			color: inherit;
+
+			&:hover,
+			&:focus{
+				color: $primary;
+				outline: none;
+			}
+		}
+
+		a[href^="mailto"]{
+			color: $primary;
+
+			&:hover,
+			&:focus{
+				color: #fff;
+				outline: none;
+			}
+		}
+	}
+
+	.section-caption{
+		margin-bottom: 5.5556vw;
+	}
+
+	.contacts-grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 5.5556vw;
+		transition: all $t;
+		margin-bottom: 5.5556vw;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		p{
+			font-size: 1.1111vw;
+		}
+	}
+
+	.small-caption{
+		font-size: 1.1111vw;
+		line-height: 1.75;
+		margin-bottom: 1.1111vw;
+		color: rgba(#fff, .5);
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	.text-btn{
+		font-size: 1.1111vw;
+		line-height: 1.75;
+		color: $primary;
+		font-weight: 400;
+
+		&:hover,
+		&:focus{
+			outline: none;
+			color: #fff;
+		}
+	}
+
+	.section-map{
+		position: fixed;
+		width: 100vw;
+		height: calc(100vh - 19.1667vw);
+		left: 0;
+		bottom: 0;
+		z-index: 20;
+		transition: all .6s;
+		transform: translateY(100%);
+		pointer-events: none;
+
+		#map{
+			width: 100%;
+			height: 100%;
+		}
+
+		.js-map-close{
+			width: 4.1667vw;
+			height: 4.1667vw;
+			position: absolute;
+			top: -4.1667vw;
+			transition: all $t;
+			transform: translateY(100%);
+
+			html[dir="ltr"] &{
+				right: 5.5556vw;
+			}
+
+			html[dir="rtl"] &{
+				left: 5.5556vw;
+			}
+
+			&:before,
+			&:after{
+				content: '';
+				display: block;
+				width: 20px;
+				height: 2px;
+				position: absolute;
+				left: calc(50% - 10px);
+				top: calc(50% - 1px);
+				border-radius: 1px;
+				background: $primary;
+				transition: all $t;
+			}
+
+			&:before{
+				transform: rotate(-45deg);
+			}
+
+			&:after{
+				transform: rotate(45deg);
+			}
+
+			&:hover,
+			&:focus{
+				outline: none;
+
+				&:before,
+				&:after{
+					background: #fff;
+				}
+			}
+		}
+	}
+
+	&.map-opened{
+		padding-top: 11.1111vw;
+
+		&:before{
+			opacity: 0;
+		}
+
+		.section-map{
+			transform: translateY(0);
+			pointer-events: auto;
+
+			.js-map-close{
+				transform: translateY(0);
+			}
+		}
+
+		.contacts-grid{
+			visibility: hidden;
+			opacity: 0;
+			height: 0;
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		&:before{
+			background-position: 85% center;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		padding: 120px 0 40px;
+
+		&:before{
+			background-position: right 35% center;
+		}
+
+		.section-content{
+			width: 75vw;
+
+			p{
+				margin-bottom: 16px;
+
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.section-caption{
+			margin-bottom: 160px;
+		}
+
+		.contacts-grid{
+			grid-gap: 16px;
+			margin-bottom: 16px;
+
+			p{
+				font-size: 16px;
+			}
+		}
+
+		.small-caption{
+			font-size:16px;
+			margin-bottom: 16px;
+		}
+
+		.text-btn{
+			font-size: 16px;
+		}
+
+		.section-map{
+			height: calc(100vh - 120px - 64px - 20px);
+
+			.js-map-close{
+				width: 40px;
+				height: 40px;
+				top: -40px;
+
+				html[dir="ltr"] &{
+					right: 10px;
+				}
+
+				html[dir="rtl"] &{
+					left: 10px;
+				}
+			}
+		}
+
+		&.map-opened{
+			padding-top: 120px;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		&:before{
+			background-position: 75% top;
+			background-size: auto 640px;
+			height: 100%;
+			background-color: #000;
+		}
+
+		.section-content{
+			width: auto;
+		}
+
+		.contacts-grid{
+			grid-gap: 40px;
+			margin-bottom: 40px;
+
+			&:last-child{
+				position: relative;
+
+				&:after{
+					content: '';
+					display: block;
+					width: 110vw;
+					height: 50vh;
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					top: -20px;
+					background: #000;
+				}
+
+				.item{
+					position: relative;
+					z-index: 2;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.contacts-grid{
+			grid-template-columns: 1fr;
+		}
+	}
+}

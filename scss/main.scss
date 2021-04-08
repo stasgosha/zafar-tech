@@ -1,0 +1,42 @@
+@import "components/fonts";
+@import "components/vars";
+@import "components/assist";
+@import "components/layout";
+@import "components/typography";
+@import "icons";
+
+// Header
+@import "components/header/header";
+@import "components/header/main-nav";
+
+// Footer
+@import "components/footer/footer";
+
+// Common
+@import "components/common/buttons";
+@import "components/common/forms";
+@import "components/common/sliders";
+@import "components/common/modals";
+@import "components/common/menu-opener";
+@import "components/common/cookies-info-block";
+// @import "components/common/tabs-nav";
+// @import "components/common/video-block";
+// @import "components/common/panel";
+// @import "components/common/pagination";
+// @import "components/common/tables";
+
+// Sections
+@import "components/sections/home-section";
+@import "components/sections/about-section";
+@import "components/sections/sectors-section";
+@import "components/sections/sector-page-section";
+@import "components/sections/application-section";
+@import "components/sections/values-section";
+@import "components/sections/error-page-section";
+@import "components/sections/contact-us-section";
+@import "components/sections/how-we-work-section";
+@import "components/sections/path-section";
+@import "components/sections/get-started-section";
+@import "components/sections/page-end-section";
+@import "components/sections/get-in-touch-page";
+@import "components/sections/enquiry-page";
