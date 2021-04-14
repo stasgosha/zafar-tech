@@ -20,7 +20,7 @@
 		padding: 40px 0;
 
 		.section-inner{
-			grid-template-columns: 1fr;
+			grid-template-columns: 100%;
 			grid-gap: 40px;
 		}
 
@@ -35,7 +35,8 @@
 
 	@media screen and (max-width: 575px){
 		.section-grid{
-			height: auto;
+			height: calc(100vh - 80px - 40px - 64px - 40px - 40px);
+			display: block;
 			width: calc(100% + 20px * 2);
 			margin-left: -20px;
 			margin-right: -20px;
@@ -82,7 +83,7 @@
 
 		.card-icon{
 			position: absolute;
-			top: -1.3889vw;
+			top: 3vw;
 			fill: #fff;
 			width: 2.2222vw;
 			height: 3.3333vw;
@@ -120,6 +121,8 @@
 	}
 
 	@media screen and (min-width: 576px){
+		transition: height .3s;
+
 		&:before{
 			content: '';
 			display: block;
@@ -142,28 +145,46 @@
 			}
 		}
 
+		--step: 8vw;
+
 		&:nth-child(1){
-			height: 27.7778vw;
+			--card-height: 27.7778vw;
+
+			.card-inner{
+				.card-icon{
+					top: 1vw;
+				}
+			}
 		}
 
 		&:nth-child(2){
-			height: 26.3889vw;
+			--card-height: 26.3889vw;
 		}
 
 		&:nth-child(3){
-			height: 22.2222vw;
+			--card-height: 22.2222vw;
 		}
 
 		&:nth-child(4){
-			height: 31.9444vw;
+			--card-height: 31.9444vw;
 		}
 
 		&:nth-child(5){
-			height: 16.6667vw;
+			--card-height: 16.6667vw;
 		}
 
 		&:nth-child(6){
-			height: 37.5000vw;
+			--card-height: 37.5000vw;
+		}
+
+		height: var(--card-height);
+
+		&.hover{
+			height: calc(var(--card-height) + var(--step));
+		}
+
+		&.small{
+			height: calc(var(--card-height) - var(--step));
 		}
 
 		&:nth-child(1),
@@ -292,7 +313,8 @@
 			padding: 40px;
 		}
 
-		&.active{
+		&.active,
+		&.slick-current{
 			color: #fff;
 
 			.card-bg{

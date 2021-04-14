@@ -77,11 +77,18 @@ document.addEventListener('DOMContentLoaded', function(){
 
 				gsap.to($(this).find('.card-icon'), 0.3, {
 					opacity: 1,
-					y: $(this).is(':nth-child(odd)') ? '-6vw' : '4vw',
+					y: $(this).is(':nth-child(odd)') ? '-9vw' : '0vw',
 					x: isRTL ? `3vw` : `-3vw`
 				});
 
+				$(this).addClass('hover');
 				$(this).siblings().addClass('faded');
+
+				if ($(this).is(':nth-child(even)')) {
+					$(this).prev().addClass('small');
+				} else{
+					$(this).next().addClass('small');
+				}
 			},
 			function() {
 				gsap.to($(this).find('.card-text'), 0.3, {
@@ -95,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function(){
 					x: 0
 				});
 
-				$(".value-card").removeClass('faded');
+				$(".value-card").removeClass('hover faded small');
 			}
 		);
 	}

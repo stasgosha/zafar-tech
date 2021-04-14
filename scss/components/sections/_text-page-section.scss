@@ -1,0 +1,66 @@
+.text-page-section{
+	padding: 3.4722vw 0;
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 30.5556vw 44.4444vw;
+		grid-gap: 2.7778vw;
+	}
+
+	.section-content{
+		color: #999;
+
+		h2{
+			@include h4;
+			text-transform: uppercase;
+			color: #fff;
+			margin-bottom: 1.3889vw;
+
+			&:not(:first-child){
+				margin-top: 5.5556vw;
+			}
+		}
+
+		h4{
+			@include p;
+			margin-bottom: 1.3889vw;
+			color: #fff;
+			font-weight: 400;
+			margin-top: 2.7778vw;
+		}
+
+		p{
+			a{
+				color: #fff;
+
+				&:hover,
+				&:focus{
+					color: $primary;
+				}
+
+				&[href^="tel:"],
+				&[href^="mailto:"]{
+					color: inherit;
+
+					&:hover,
+					&:focus{
+						color: $primary;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		padding: 40px 0;
+
+		.section-inner{
+			grid-template-columns: 1fr;
+			grid-gap: 40px;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		padding-bottom: 0;
+	}
+}
