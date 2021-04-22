@@ -35,12 +35,19 @@
 
 	@media screen and (max-width: 575px){
 		.section-grid{
-			height: calc(100vh - 80px - 40px - 64px - 40px - 40px);
+			height: auto;
+			// height: calc(100vh - 80px - 40px - 64px - 40px - 40px);
 			display: block;
 			width: calc(100% + 20px * 2);
 			margin-left: -20px;
 			margin-right: -20px;
 		}
+	}
+}
+
+@media screen and (max-width: 575px){
+	.values-page{
+		overflow: hidden;
 	}
 }
 

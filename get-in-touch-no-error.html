@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Artificial Intelligence | Zafar Technology</title>
+	<title>Get in touch | Zafar Technology</title>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
 
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> -->
-	<link rel="stylesheet" href="../css/slick.min.css">
-	<link rel="stylesheet" href="../css/slick-theme.min.css">
-	<!-- <link rel="stylesheet" href="../css/jcf.css"> -->
-	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="css/slick.min.css">
+	<link rel="stylesheet" href="css/slick-theme.min.css">
+	<link rel="stylesheet" href="css/jcf.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<div class="wrapper" id="top">
@@ -22,12 +25,12 @@
 					<div class="header-block header-start">
 						<a href="index.html" class="logo-block">
 							<picture class="card-image">
-								<source srcset="../img/logo-mobile.svg" media="(max-width: 575px)" />
-								<img src="../img/logo.svg" alt="Zafar Technology">
+								<source srcset="img/logo-mobile.svg" media="(max-width: 575px)" />
+								<img src="img/logo.svg" alt="Zafar Technology">
 							</picture>
 						</a>
 
-						<a href="../" class="language-link">English</a>
+						<a href="/projects/zafar-tech/ar" class="language-link">عربي</a>
 					</div>
 					<div class="header-block">
 						<button class="menu-opener" aria-label="Show navigation">
@@ -40,74 +43,66 @@
 			</div>
 		</header>
 		<main class="page-content">
-			<section class="sector-page-section">
-				<div class="container">
-					<div class="section-top">
-						<div class="section-caption">
-							<h2 class="sc-title">
-								<small>
-									<a href="sectors.html" class="sc-back-link">
-										<svg class="link-icon">
-											<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
-										</svg>
-										back to Sectors
-									</a>
-								</small>
-								Artificial Intelligence
-							</h2>
-						</div>
-						
-						<div class="section-text tpg">
-							<p>All the most valuable things done by humanity are the result of mental activity. If you  increase the capabilities of the human brain with artificial intelligence technologies, you can not only change our lives, but also experience the greatest  flourishing of civilization. The main thing is to make technologies serve exclusively for the benefit of humanity. </p>
-						</div>
-					</div>
-
-					<div class="similar-posts-grid">
-						<a href="#" class="similar-post-card">
-							<div class="card-bg">
-								<img src="../img/content-images/sectors/machine-learning.jpg" alt="">
-							</div>
-							<div class="card-content">
-								<h3 class="card-caption">Machine Learning</h3>
-							</div>
-						</a>
-
-						<a href="#" class="similar-post-card">
-							<div class="card-bg">
-								<img src="../img/content-images/sectors/data-science.jpg" alt="">
-							</div>
-							<div class="card-content">
-								<h3 class="card-caption">Data science</h3>
-							</div>
-						</a>
-
-						<a href="#" class="similar-post-card">
-							<div class="card-bg">
-								<img src="../img/content-images/sectors/computer-vision.jpg" alt="">
-							</div>
-							<div class="card-content">
-								<h3 class="card-caption">Computer vision</h3>
-							</div>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<section class="application-section">
+			<section class="get-in-touch-page">
 				<div class="container">
 					<div class="section-inner">
-						<h3 class="block-caption">Application for investment</h3>
-
-						<div class="block-text">
-							<p>We allow ourselves to be impulsive if we like you or your idea. We are not biased towards industry or geography. We try to be open to all interesting ideas.</p>
+						<div class="section-title">
+							<div class="section-caption">
+								<h2 class="sc-title"><small>Send us a direct message</small>Get in touch</h2>
+							</div>
 						</div>
+						<div class="section-form">
+							<form action="" class="form get-in-touch-form">
+								<div class="form-fields columns-2">
+									<div class="form-field">
+										<label class="form-label">First Name</label>
+										<input type="text" class="input-field">
+									</div>
 
-						<a href="get-in-touch.html" class="btn btn-light">
-							<span class="btn-text">Make an enquiry</span>
-							<svg class="btn-icon rtl-reverse">
-								<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
-							</svg>
-						</a>
+									<div class="form-field">
+										<label class="form-label">Last Name</label>
+										<input type="text" class="input-field">
+									</div>
+
+									<div class="form-field">
+										<label class="form-label">E-mail</label>
+										<input type="email" class="input-field">
+									</div>
+
+									<div class="form-field">
+										<label class="form-label">Phone Number</label>
+										<input type="tel" class="input-field phone-mask">
+									</div>
+
+									<div class="form-field fullwidth">
+										<label class="form-label">Please let us know what we can do to serve your needs</label>
+										<textarea></textarea>
+									</div>
+								</div>
+
+								<div class="form-footer">
+									<label class="checkbox">
+										<input type="checkbox" class="visually-hidden">
+										<span class="fake-label">Please, inform me about news</span>
+									</label>
+
+									<div class="form-agreement">
+										<p>By submitting the form you agree <br>to the processing of personal data</p>
+									</div>
+
+									<button class="btn btn-light">
+										<span class="btn-text">Send</span>
+										<svg class="btn-icon rtl-reverse">
+											<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
+										</svg>
+									</button>
+
+									<div class="form-thank-you">
+										<p>Thank you for your message. It has been sent</p>
+									</div>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -118,31 +113,31 @@
 	<nav class="main-nav">
 		<div class="big-links">
 			<a href="company.html" class="big-menu-link">
-				<video src="../img/backgrounds/big-link-bg-1.mp4" class="link-bg" muted playsinline loop></video>
+				<video src="img/backgrounds/big-link-bg-1.mp4" class="link-bg" muted playsinline loop></video>
 				<span class="link-content">
 					<span class="link-text">Company</span>
 					<svg class="link-icon">
-						<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+						<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 					</svg>
 				</span>
 			</a>
 
 			<a href="sectors.html" class="big-menu-link">
-				<video src="../img/backgrounds/big-link-bg-2.mp4" class="link-bg" muted playsinline loop></video>
+				<video src="img/backgrounds/big-link-bg-2.mp4" class="link-bg" muted playsinline loop></video>
 				<span class="link-content">
 					<span class="link-text">Sectors</span>
 					<svg class="link-icon">
-						<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+						<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 					</svg>
 				</span>
 			</a>
 
 			<a href="how-we-work.html" class="big-menu-link">
-				<video src="../img/backgrounds/big-link-bg-3.mp4" class="link-bg" muted playsinline loop></video>
+				<video src="img/backgrounds/big-link-bg-3.mp4" class="link-bg" muted playsinline loop></video>
 				<span class="link-content">
 					<span class="link-text">How we work</span>
 					<svg class="link-icon">
-						<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+						<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 					</svg>
 				</span>
 			</a>
@@ -154,7 +149,7 @@
 						<a href="index.html">
 							<span class="link-text">Home</span>
 							<svg class="link-icon">
-								<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+								<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 							</svg>
 						</a>
 					</li>
@@ -162,7 +157,7 @@
 						<a href="company.html">
 							<span class="link-text">Company</span>
 							<svg class="link-icon">
-								<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+								<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 							</svg>
 						</a>
 					</li>
@@ -170,7 +165,7 @@
 						<a href="sectors.html">
 							<span class="link-text">Sectors</span>
 							<svg class="link-icon">
-								<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+								<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 							</svg>
 						</a>
 					</li>
@@ -178,7 +173,7 @@
 						<a href="how-we-work.html">
 							<span class="link-text">How we work</span>
 							<svg class="link-icon">
-								<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+								<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 							</svg>
 						</a>
 					</li>
@@ -186,7 +181,7 @@
 						<a href="values.html">
 							<span class="link-text">Values</span>
 							<svg class="link-icon">
-								<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+								<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 							</svg>
 						</a>
 					</li>
@@ -194,7 +189,7 @@
 						<a href="contacts.html">
 							<span class="link-text">Contact</span>
 							<svg class="link-icon">
-								<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+								<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 							</svg>
 						</a>
 					</li>
@@ -202,7 +197,7 @@
 						<a href="get-in-touch.html">
 							<span class="link-text">Get in touch</span>
 							<svg class="link-icon">
-								<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+								<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 							</svg>
 						</a>
 					</li>
@@ -211,14 +206,14 @@
 				<div class="nav-contacts">
 					<a href="mailto:info@zafar.tech" class="contact-link">
 						<svg class="link-icon">
-							<use xlink:href="../img/icons-sprite.svg#envelope"></use>
+							<use xlink:href="img/icons-sprite.svg#envelope"></use>
 						</svg>
 						<span class="link-text">info@zafar.tech</span>
 					</a>
 				
 					<a href="tel:+966138878888" class="contact-link">
 						<svg class="link-icon">
-							<use xlink:href="../img/icons-sprite.svg#phone"></use>
+							<use xlink:href="img/icons-sprite.svg#phone"></use>
 						</svg>
 						<span class="link-text">+966 13 8878888</span>
 					</a>
@@ -229,21 +224,21 @@
 						<li>
 							<a href="#" target="_blank" rel="noopener nofollow" aria-label="facebook">
 								<svg class="link-icon">
-									<use xlink:href="../img/icons-sprite.svg#facebook"></use>
+									<use xlink:href="img/icons-sprite.svg#facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" target="_blank" rel="noopener nofollow" aria-label="linkedin">
 								<svg class="link-icon">
-									<use xlink:href="../img/icons-sprite.svg#linkedin"></use>
+									<use xlink:href="img/icons-sprite.svg#linkedin"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
 							<a href="#" target="_blank" rel="noopener nofollow" aria-label="twitter">
 								<svg class="link-icon">
-									<use xlink:href="../img/icons-sprite.svg#twitter"></use>
+									<use xlink:href="img/icons-sprite.svg#twitter"></use>
 								</svg>
 							</a>
 						</li>
@@ -266,7 +261,7 @@
 					<a href="#" class="show-details-link">
 						<span class="link-text">Show details</span>
 						<svg class="link-icon">
-							<use xlink:href="../img/icons-sprite.svg#arrow-right"></use>
+							<use xlink:href="img/icons-sprite.svg#arrow-right"></use>
 						</svg>
 					</a>
 
@@ -284,10 +279,10 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
-	<script src="../js/slick.min.js"></script>
-	<script src="../js/jcf.js"></script>
-	<script src="../js/jcf.select.js"></script>
-	<script src="../js/scripts.js"></script>
-	<script src="../js/animations.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jcf.js"></script>
+	<script src="js/jcf.select.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/animations.js"></script>
 </body>
 </html>
